@@ -36,7 +36,6 @@ spec:
     requests:
       storage: 7Gi
 ---
-kind: Service
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -45,6 +44,7 @@ provisioner: kubernetes.io/gce-pd
 parameters:
   type: pd-standard
 ---
+kind: Service
 apiVersion: v1
 metadata:
   name: fleetman-mongodb
